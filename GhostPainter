@@ -1,0 +1,114 @@
+public class GhostPainter extends MuralPainter{
+
+/*
+*This method below is the method that is being called in NeighborhoodRunner 
+*class to run the program. 
+*/
+public void paintGhost(String bodyColor, String eyeColor, String pupilColor){
+
+  paintBody(bodyColor);
+
+      paintEyes(eyeColor);
+  
+  paintPupil(pupilColor);
+}
+
+/*
+*This method paints the body of the pacman ghost(Blinky).
+*/
+public void paintBody(String bodyColor){
+  move();
+  move();
+  turnRight();
+  move();
+  turnLeft();
+  move();
+  paintLine(bodyColor, 3);
+  turnRight();
+
+  move();
+  turnRight();
+  paintLine(bodyColor, 5);
+
+  turnLeft();
+  move();
+  turnLeft();
+  paintLine(bodyColor, 7);
+
+  turnRight();
+  move();
+  turnRight();
+  paintLine(bodyColor,7);
+
+  turnLeft();
+  move();
+  turnLeft();
+  move();
+  paintLine(bodyColor,7);
+
+  turnRight();
+  move();
+  turnRight();
+  paintLine(bodyColor,7);
+
+  turnLeft();
+  move();
+  turnLeft();
+  move();
+  paintLine(bodyColor, 1);
+  move();
+  paintLine(bodyColor, 2);
+  move();
+  paintLine(bodyColor, 2);
+
+  resetPosition();
+}
+/*
+* After reseting the position of the painter, the painter will then paint the eyes of Blinky.
+*/
+
+  public void paintEyes(String eyeColor){
+    turnRight();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+    move();
+    paintSquare(eyeColor, 4);
+
+    move();
+    move();
+    move();
+    paintSquare(eyeColor, 4);
+
+    resetPosition();
+  }
+/*
+*After the eyes have been done, the painter will then paint the pupils of Blinky.
+*/
+  
+public void paintPupil(String pupilColor){
+    turnRight();
+    move();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+    move();
+
+    paintLine(pupilColor, 1);
+    move();
+    move();
+    paintLine(pupilColor, 1);
+
+    resetPosition();
+}
+
+
+
+
+
+  
+}

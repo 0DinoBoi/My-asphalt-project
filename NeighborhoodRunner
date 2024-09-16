@@ -1,0 +1,14 @@
+public class NeighborhoodRunner {
+  public static void main(String[] args) {
+
+/*
+* These are the painters needed to create the image.
+*/
+GhostPainter ela = new GhostPainter();
+MuralPainter oryx = new MuralPainter();
+oryx.paintBackground("navy", 8);
+
+ela.paintGhost("red", "white", "black");
+    
+  }
+}
